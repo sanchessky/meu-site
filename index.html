@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,31 +32,58 @@
             padding: 15px;
             width: 100%;
             border-radius: 10px;
-            color: white;
+            color: rgb(white);
             font-size: 15px;
             cursor: pointer;
         }
         button:hover{
             background-color: deepskyblue;
         }
+
+        
     </style>
 
 </head>
 <body>
 
     <div>
-        <h1>Login</h1>
-        <input type="text" placeholder="Nome">
+         <h1>Login</h1>
+        <input type="text" placeholder="login"id="login">
         <br><br>
-        <input type="password" placeholder="Senha">
+        <input type="password" placeholder="senha"id="senha">
         <br><br>
-        <a href="teste.html"><button>Entrar</button></a>
+         <button>
+        <input type="Entrar" onclick="login(); return false">
+         </button> 
 
-
-
-
-
+    
     </div>
-
+    
+    <script>
+    
+    
+    
+    
+        function login(){
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+           
+            if(login = "admin" && senha == "admin"){
+                alert('autenticado');
+                location.href = "teste.html";
+            }
+            
+            else{
+                alert('Usuario incorretos');}
+            }       
+            
+    
+    
+    
+    
+    
+    
+        </script>
+  
 </body>
 </html> 
