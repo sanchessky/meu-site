@@ -33,3 +33,28 @@ button{
 button:hover{
     background-color: deepskyblue;
 }
+.insta{           
+    position: absolute;
+    top: 16%;
+   left: 15%;
+   padding: 5px;
+   border-radius: 500px;
+   color: black;
+   background-image: linear-gradient(45deg,#A020F0,#DCD0FF);
+
+   width: 200px;
+   height: 60px;
+   background-color: #3498db;
+   position: relative;
+   animation: mover 4s infinite alternate;
+}
+
+@keyframes mover {
+   from {
+       transform: translateX(100);
+   }
+   to {
+       transform: translateX(300px);
+   }
+
+}
