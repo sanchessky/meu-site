@@ -63,18 +63,17 @@
     
     
     
-        function login(){
-            var login = document.getElementById('login').value;
-            var senha = document.getElementById('senha').value;
-           
-            if in [login = "Adm_sanches", senha == "admin"]{
-                alert('Autênticado');
-                location.href = "teste.html";
-            }
-            
-            else{
-                alert('Usuario incorretos');}
-            }       
+    function login() {
+    var login = document.getElementById('login').value;
+    var senha = document.getElementById('senha').value;
+
+    if (login === "Adm_sanches" && senha === "admin") {
+        alert('Autenticado');
+        location.href = "teste.html";
+    } else {
+        alert('Usuários incorretos');
+    }
+}
             
 
     
