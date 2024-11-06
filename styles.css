@@ -1,4 +1,30 @@
 @charset "UTF-8";
+/*Importação de Fontes do Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap');
+
+
+/* SmartPhone Portrait (levantado) */
+
+
+/* SmartPhone Landscape (deitado) */
+@media (min-width: 576px) {
+    
+}
+
+/* Tablet Landscape (deitado) */
+@media (min-width: 992px) {
+
+
+}
+/* PCs/Notebooks */
+@media (min-width: 1200px) {
+
+
+}
+/* Telas FullHD /4K /SmartTV */
+@media (min-width: 1400px) {
+  
+}
 
 body{
     font-family:Arial, Helvetica, sans-serif;
