@@ -4,7 +4,9 @@
 
 
 /* SmartPhone Portrait (levantado) */
-
+@media (min-width: 576px) {
+    
+}
 
 /* SmartPhone Landscape (deitado) */
 @media (min-width: 576px) {
