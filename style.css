@@ -1,0 +1,255 @@
+@charset "UTF-8";
+/*Importação de Fontes do Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap');
+/*Variáveis (criar variavel------root) */
+:root {
+    --laranja:  #FFA500;
+    --branco: #fff;
+    --azul: #78c9e4;
+    --preto: #000000;
+    --vermelho: #ff0000;
+
+}
+
+
+
+
+
+
+/*CSS Reset (Compatibilizar com todos os navegadores)*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+/*Layout (Estrutura do site) */
+body{
+    font-family: "Exo 2", sans-serif;
+    font-size: 1em; /*1em = 100% (Tamanho Padrão)*/
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+/*Ajuste de tamanho dos lados*/
+.container{
+    margin: 0 auto; /*centraliza o bloco*/
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+}
+.botao {
+    text-decoration: none;
+    color: var(--azul);
+    font-size: 1.3em;
+    font-weight: 1000;
+    align-self: center;
+    padding: 15px 10px;
+    border: 2px solid var(--laranja);
+    border-radius: 26px;
+    margin-top: 25px;
+}
+
+/* SmartPhone Portrait (levantado) */
+
+    /*cabeçalho */
+header {
+    height: 45px; /*Altura*/
+    /*background-color: #FFA500;Cor*/
+}
+/*Ajuste de tamanho do Logotipo*/
+#logo img{
+    width: 120px;  /*Largura*/
+    height: 120px; /*Altura*/
+    margin: 40px 0px 0px 8px;     /*margem geral*/
+    /* margin-top: 6px;  margem superior*/
+    /* margin-left: 8px; margem esquerda*/
+
+    
+}
+/* nav */
+nav ul{
+    height: 100vh;  /*100vh - 100% altura da tela*/
+    background-color: rgb(255, 165, 0, 0.2); /* 0.5* = 50% de transparencia (0 a 1 (100%)*/
+    list-style: none; /* remover bullets */
+    width: 65%;
+    position: fixed;
+    top: 45px;
+    right: -65%;
+    transition: all 0.7s;
+}
+nav ul li{
+    padding: 7px 10px; /*espacamento da borda */
+    border-bottom: 1px solid var(--preto); /*borda de baixo do conteúdo*/
+    text-align: right;
+
+}
+nav ul li a {
+    color: var(--preto);
+    text-decoration: none; /*remover sublinhado*/
+}
+
+/* Menu */
+#check{
+    display: none;
+}
+/*efeito de deslizar o menu*/
+#check:checked~ul{
+                                /*se cheack estiver "ticado",criar um esilo para ul*/
+        right: 0px;
+
+
+}
+    
+
+label {
+    font-size: 3em;
+    position: fixed;
+    top: -5px;
+    right: 5px;
+    color: rgb(255, 165, 0.5); /* 0.5* = 50% de transparencia (0 a 1 (100%)*/
+
+}
+/*Banner*/
+main{
+    height: 100vh;
+    background: url(img/banner1.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+/*Textos*/
+
+main h1, h2 {
+ color: var(--branco);
+ text-shadow: #000 0.05em 0.05em 0.05em; /*efeito de sombra*/
+ 
+}
+main h1{
+    font-size: 4.5em;
+}
+main h2{
+    font-size: 3.5em;
+    margin-top: 9px;
+}
+main h3{
+    font-size: 1.5em;
+    margin-top: 9px;
+    color: var(--branco);
+    text-shadow: #000 0.05em 0.05em 0.05em; /*efeito de sombra*/
+
+
+}
+
+/* SmartPhone Landscape (deitado) */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;   /*Tamanho max */
+        /*background-color: #FFA500;*/
+    }
+    #logo img{
+        width: 64px;  /*Largura*/
+        height: 64px; /*Altura*/
+        margin: 6px 0px 0px 8px; 
+}
+}
+/* Tablet Portrait (levantado) */
+@media (min-width: 768px) {
+   /*cabeçalho */
+   .container {
+    max-width: 720px;            /*Tamanho max */
+   /*background-color: #FFA500;*/
+}
+    header {
+        height: 60px; /*Altura*/
+    }
+    #logo img{
+        width: 100px;  /*Largura*/
+        height: 100px; /*Altura*/
+    }
+    nav ul {
+        top:60px;
+        width: -65%;
+        right: -70%;
+
+    }
+    /*Ajuste do banner*/
+    main h1{
+        font-size: 7.5em;
+    }
+    main h2{
+        font-size: 5.5em;
+        margin-top: 15px;
+    
+    }
+}
+/* Tablet Landscape (deitado) */
+@media (min-width: 992px) {
+   /*cabeçalho */
+    .container {
+        max-width: 960px; /*Tamanho max */
+       /* background-color: #FFA500; Cor*/
+    }
+
+
+
+}
+/* PCs/Notebooks */
+@media (min-width: 1200px) {
+     /*cabeçalho */
+   header  {
+        height: 80px; /*Altura*/
+   }
+   #logo img{
+        width: 1000px; /*Largura*/
+        height: 1000px; /*Altura*/
+   }
+   .container{    
+        max-width: 1140px; /*Tamanho max */
+       /* background-color: #FFA500; Cor*/
+   }
+   /*transformaçã do menu*/
+   label{
+    display: none;
+   }
+   nav ul{
+    width: 100%;
+    height: auto;
+    position: static;
+    background-color: transparent; /*remover a cor do background-color*/
+   }
+   nav ul li{
+    float: left;
+    border: 0;
+    }
+        nav ul li a{
+    color: var(--azul)
+
+    }
+    nav ul li a:hover {
+    color: var(--vermelho);
+    }
+    /*Ajuste do banner*/
+    main h1{
+    font-size: 7.5em;
+    }
+
+}
+/* Telas FullHD /4K /SmartTV */
+@media (min-width: 1400px) {
+    /*cabeçalho */
+    .container{    /*Tamanho max */
+        max-width: 1250px;
+        /*background-color: #FFA500; /*Cor*/
+   }
+   header  {
+        height: 80px; /*Altura*/
+   }
+   #logo img{
+        width: 128px; /*Largura*/
+        height: 128px;  /*Altura*/
+}
+}
